@@ -1,6 +1,13 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World! This is for GitHub Actions");
+app.MapGet("/", () =>
+{
+    // Original response
+    var response = "Hello World! This is for GitHub Actions";
 
-app.Run();
+    // New line added
+    response += "\nThis is another Example";
+
+    return response;
+});
