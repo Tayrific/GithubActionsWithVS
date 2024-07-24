@@ -20,6 +20,8 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.x'
+      - name: Print DOTNET_ROOT
+        run: echo "DOTNET_ROOT=${{ env.DOTNET_ROOT }}"
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
